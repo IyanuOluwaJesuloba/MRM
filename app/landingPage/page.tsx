@@ -303,7 +303,7 @@ export default function LandingPage() {
                     fill
                     priority
                     sizes="200vw"
-                    className="object-cover"
+                    className="object-cover md:block hidden"
                   />
                   <div className="absolute inset-0 bg-linear-to-r from-[#00131c]/95 via-[#001b27]/80 to-transparent" />
 
