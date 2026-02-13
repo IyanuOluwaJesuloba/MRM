@@ -2,7 +2,7 @@
 
 import { motion, type HTMLMotionProps } from "framer-motion";
 import Link, { LinkProps } from "next/link";
-import { ReactNode, ComponentType } from "react";
+import { ReactNode } from "react";
 import { cx } from "@/lib/cx";
 
 const baseClasses =
@@ -32,8 +32,6 @@ type ButtonLinkProps = ButtonBaseProps &
 
 type ButtonProps = ButtonBaseProps & Omit<HTMLMotionProps<"button">, keyof ButtonBaseProps>;
 
-const MotionLink = motion(Link as unknown as ComponentType<LinkProps>);
-
 export function ButtonLink({
   variant = "brand",
   className,
@@ -41,15 +39,16 @@ export function ButtonLink({
   ...props
 }: ButtonLinkProps) {
   return (
-    <MotionLink
-      {...props}
-      className={cx(baseClasses, variantMap[variant], className)}
+    <motion.span
+      className="inline-flex"
       whileHover={{ y: -2, scale: 1.02 }}
       whileTap={{ scale: 0.98, y: 0 }}
       transition={{ type: "spring", stiffness: 450, damping: 30 }}
     >
-      {children}
-    </MotionLink>
+      <Link {...props} className={cx(baseClasses, variantMap[variant], className)}>
+        {children}
+      </Link>
+    </motion.span>
   );
 }
 

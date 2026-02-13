@@ -13,7 +13,7 @@ export function Footer() {
   return (
     <footer className="bg-[#001b27] text-white">
       <motion.div
-        className="section-shell grid gap-8 md:grid-cols-4"
+        className="mx-auto max-w-[1280px] px-6 py-12 md:px-12 lg:px-16 grid gap-8 md:grid-cols-4 "
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
