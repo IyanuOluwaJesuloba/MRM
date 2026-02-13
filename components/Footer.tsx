@@ -23,7 +23,7 @@ export function Footer() {
         }}
       >
         <motion.div variants={{ hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0 } }} className="space-y-3">
-          <Image src="/Icon Colored.png" alt="Mighty Refuge logo" width={56} height={56} />
+          <Image src="/assests/svg/Icon Colored.png" alt="Mighty Refuge logo" width={56} height={56} />
           <p className="text-sm text-white/70">
             Mighty Refuge Ministries
             <br />

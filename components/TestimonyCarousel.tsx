@@ -97,7 +97,7 @@ export function TestimonyCarousel({ items }: TestimonyCarouselProps) {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.3 + idx * 0.1, duration: 0.5 }}
                   >
-                    "{testimony.quote}"
+                    {testimony.quote}
                   </motion.p>
                   <motion.div 
                     className="mt-6"

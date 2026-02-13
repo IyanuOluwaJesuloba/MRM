@@ -352,7 +352,7 @@ export default function LandingPage() {
 
               <Section id="services" className="relative overflow-hidden">
                 <div
-                  className="pointer-events-none -mt-10 absolute inset-x-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,_rgba(255,140,33,0.15),_transparent_65%)] blur-3xl"
+                  className="pointer-events-none absolute inset-x-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,_rgba(255,140,33,0.15),_transparent_65%)] blur-3xl"
                   aria-hidden="true"
                 />
                 <Reveal>
