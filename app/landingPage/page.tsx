@@ -309,7 +309,7 @@ export default function LandingPage() {
 
                   <div className="relative z-10 w-full px-6 py-16 sm:px-10 lg:px-16">
                     <Reveal>
-                      <div className="max-w-xl space-y-6 text-white lg:pl-30 pl-5 lg:py-20">
+                      <div className="max-w-xl space-y-6 text-white lg:pl-30 lg:py-20">
                         <h2 className="text-4xl font-semibold leading-tight">Our Lead Pastor</h2>
                         <p className="text-lg text-white/80">
                           Pastor Benjamin Abiodun has spent two decades raising intercessors, discipling pioneers, and launching Spirit-led
