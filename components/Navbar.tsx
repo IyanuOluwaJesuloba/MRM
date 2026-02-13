@@ -62,7 +62,7 @@ export function Navbar({ className }: { className?: string }) {
             </motion.span>
           ))}
         </nav>
-        <ButtonLink href="/services" variant="ghost" className="hidden lg:inline-flex">
+        <ButtonLink href="/services" variant="ghost" className="hidden lg:inline-flex md:block hidden">
           Join Us
         </ButtonLink>
         <button
