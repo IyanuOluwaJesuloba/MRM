@@ -78,20 +78,21 @@ const serviceCards = [
     title: "Sunday Encounter Service",
     tag: "Weekend",
     time: "Sundays · 9:00 AM – 11:30 AM",
-    location: "Main Auditorium · Ring Road, Ibadan",
+    location: "Main Auditorium",
     description:
       "Our primary family gathering featuring immersive worship, the Word, communion, and ministry to every generation.",
     highlights: ["Kids & teens church available", "Communion + ministry moments", "Livestream on YouTube"],
     button: "Plan Sunday Visit",
   },
   {
-    title: "Tuesday Bible Studio",
+    title: "Tuesday Bible Study",
     tag: "Midweek",
     time: "Tuesdays · 6:00 PM – 7:30 PM",
     location: "Discipleship Hub · Upper Room",
     description: "Interactive teaching environments that equip you to rightly divide the Word and live it out daily.",
     highlights: ["Verse-by-verse teaching", "Small discipleship circles", "Resource materials provided"],
     button: "Save My Seat",
+    tone: "brand",
   },
   {
     title: "Thursday Prayer Watches",
@@ -108,17 +109,17 @@ const latestPosts = [
   {
     title: "Gospel Reaches Gbedun Town",
     tag: "Featured Outreach",
-    date: "Jan 25, 2026",
+    date: "Jan, 2025",
     excerpt:
       "Our evangelism team ministered to over 200 people—sharing the Gospel and demonstrating God's love through practical service.",
-    highlights: ["10+ salvations", "Medical + food relief", "New prayer hub launched"],
+    highlights: ["10+ salvations", "Healings and Miracles", "Medical + food relief"],
     action: "Read Field Report",
     featured: true,
   },
   {
     title: "Year-End Prayer Retreat",
     tag: "Upcoming Event",
-    date: "Feb 17 · 3-Day Retreat",
+    date: "December, 2026 · 3-Day Retreat",
     excerpt:
       "Encounter God's vision for 2026 in our sacred time of prayer, worship, and prophetic direction at the Prayer Mountains.",
     highlights: ["Worship nights", "Prophetic council", "Personal prayer tents"],
@@ -127,10 +128,10 @@ const latestPosts = [
   {
     title: "The Palace Pillars",
     tag: "Ministry Highlight",
-    date: "Weekly Thursdays",
+    date: "Every Thursday",
     excerpt:
-      "Our women's ministry is empowering sisters, young ladies, and girls with discipleship, mentorship, and safe spaces.",
-    highlights: ["Mentor circles", "Entrepreneur labs", "Care packages"],
+      "Our women's ministry is empowering women, young ladies, and girls with discipleship, mentorship, and safe spaces.",
+    highlights: ["Mentorship circles", "Entrepreneur labs", "Care packages"],
     action: "Meet the Team",
   },
 ];
@@ -161,7 +162,7 @@ const quickActions = [
     title: "Share Your Prayer Needs",
     description:
       "We believe in the power of prayer. Submit your request and our community will intercede with you.",
-    details: "Average response in <24h",
+    details: "Average response is less than 24 hours",
     button: "Submit Prayer Request",
     tone: "brand",
   },
@@ -229,7 +230,7 @@ export default function LandingPage() {
                 <div className="grid w-full items-stretch gap-10 lg:grid-cols-2 lg:gap-0">
                   <div className="w-full px-6">
                     <Reveal>
-                      <div className="w-full space-y-6 pt-20 lg:pr-10 lg:pl-40">
+                      <div className="w-full space-y-6 pt-10 md:pt-25 lg:pr-10 lg:pl-40">
                         <SectionHeading
                           eyebrow="Welcome to Mighty Refuge Ministries"
                           title="A growing faith community in Ibadan, Nigeria dedicated to the Great Commission."
@@ -244,7 +245,7 @@ export default function LandingPage() {
                           Whether you’re seeking spiritual growth, a place to belong, or a call to action, you’ll find a warm welcome
                           and a community committed to seeing God’s kingdom advance in our generation.
                         </p>
-                        <div className="flex flex-wrap gap-4">
+                        <div className="flex lg:flex-wrap flex-row gap-4">
                           <ButtonLink href="/about" className="w-fit">
                             Learn Our Full Story →
                           </ButtonLink>
@@ -255,7 +256,7 @@ export default function LandingPage() {
                       </div>
                     </Reveal>
                   </div>
-                  <Reveal delay={120}>
+                  <Reveal delay={120} className="md:block hidden ">
                     <div className="relative flex h-[360px] w-full items-end justify-end lg:h-auto lg:min-h-[600px]">
                       <Image
                         src="/assests/svg/christian%20gathering.jpg"
@@ -351,7 +352,7 @@ export default function LandingPage() {
 
               <Section id="services" className="relative overflow-hidden">
                 <div
-                  className="pointer-events-none absolute inset-x-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,_rgba(255,140,33,0.15),_transparent_65%)] blur-3xl"
+                  className="pointer-events-none -mt-10 absolute inset-x-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,_rgba(255,140,33,0.15),_transparent_65%)] blur-3xl"
                   aria-hidden="true"
                 />
                 <Reveal>
@@ -360,14 +361,14 @@ export default function LandingPage() {
                     title="WORSHIP WITH US"
                   />
                   <p className="mx-auto mt-4 max-w-3xl text-center text-base text-muted">
-                    Whether you crave deep teaching, family worship moments, or fiery intercession, there&apos;s a space curated for you
+                    Whether you crave deep teachings, family worship moments, or fiery intercession, there&apos;s a space curated for you
                     every week. Choose a gathering and plan your visit.
                   </p>
                 </Reveal>
                 <div className="mt-12 grid gap-6 lg:grid-cols-3">
                   {serviceCards.map((card, idx) => (
                     <Reveal key={card.title} delay={idx * 120}>
-                      <div className="relative flex h-full flex-col gap-5 overflow-hidden rounded-2xl bg-white/80 p-7 text-left shadow-[0_25px_60px_rgba(0,27,39,0.08)]">
+                      <div className="relative flex h-full flex-col gap-5 overflow-hidden rounded-xl  p-7 text-left shadow-[0_25px_60px_rgba(0,27,39,0.08)]">
                         <span className="pointer-events-none absolute inset-y-0 left-0 w-px bg-white/60" aria-hidden="true" />
                         <span className="pointer-events-none absolute inset-y-0 right-0 w-px bg-white/60" aria-hidden="true" />
                         <div className="flex flex-wrap items-center justify-between gap-3 text-xs font-semibold uppercase tracking-[0.3em]">
@@ -392,7 +393,7 @@ export default function LandingPage() {
                           </ul>
                         </div>
 
-                        <Button variant="navy" className="mt-4 w-full justify-between">
+                        <Button variant="navy" className="mt-4 w-full justify-between ">
                           {card.button} <span>→</span>
                         </Button>
                       </div>
@@ -420,16 +421,16 @@ export default function LandingPage() {
                       <Reveal key={post.title} delay={isFeatured ? 0 : 140}>
                         <article
                           className={cx(
-                            "relative flex h-full flex-col gap-5 rounded-[32px] p-8 shadow-[0_30px_70px_rgba(0,27,39,0.08)] backdrop-blur transition duration-500 hover:-translate-y-1",
+                            "relative flex h-full flex-col gap-5 rounded-xl p-8 shadow-[0_30px_70px_rgba(0,27,39,0.08)] backdrop-blur transition duration-500 hover:-translate-y-1",
                             isFeatured
                               ? "lg:col-span-2 border border-white/20 bg-[#001b27] text-white"
-                              : "border border-[#001b27]/10 bg-white/80"
+                              : "border border-[#001b27]/10 bg-transparent"
                           )}
                         >
                           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em]">
                             <span
                               className={cx(
-                                "rounded-full px-4 py-1 font-semibold",
+                                "rounded-xl px-4 py-1 font-semibold",
                                 isFeatured ? "bg-white/10 text-white" : "bg-brand/10 text-brand"
                               )}
                             >
@@ -451,7 +452,7 @@ export default function LandingPage() {
                                 >
                                   <span
                                     className={cx(
-                                      "mt-1 h-2.5 w-2.5 rounded-full",
+                                      "mt-1 h-2.5 w-2.5 rounded-xl",
                                       isFeatured ? "bg-white/70" : "bg-[#ff8c21]"
                                     )}
                                     aria-hidden="true"
@@ -466,7 +467,7 @@ export default function LandingPage() {
                             variant={isFeatured ? "ghost" : "subtle"}
                             className={cx(
                               "mt-auto w-fit",
-                              isFeatured ? "border-white/30 text-white hover:bg-white/10" : "text-[#001b27]"
+                              isFeatured ? "border-white/30 text-white hover:bg-white/10" : "text-[#001b27] hover:bg-[#001b27]/10"
                             )}
                           >
                             {post.action} <span>→</span>
@@ -504,7 +505,7 @@ export default function LandingPage() {
                   <SectionHeading
                     eyebrow="Get Connected"
                     title="Find your next step in community"
-                    description="Whether it's prayer support, spiritual growth, or radical generosity—choose a step and we’ll walk with you."
+                    description="Whether it's prayer support, spiritual growth, or radical generosity - choose a step and we’ll walk with you."
                   />
                 </Reveal>
                 <div className="mt-12 grid gap-6 lg:grid-cols-3">
@@ -514,22 +515,15 @@ export default function LandingPage() {
                       <Reveal key={action.title} delay={120}>
                         <div
                           className={cx(
-                            "flex h-full flex-col rounded-[28px] border p-8 shadow-[0_30px_70px_rgba(0,27,39,0.08)]",
+                            "flex h-full flex-col rounded-xl border p-8 shadow-[0_30px_70px_rgba(0,27,39,0.08)] ",
                             tone.wrapper
                           )}
                         >
-                          <span
-                            className={cx(
-                              "w-fit rounded-full px-4 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.3em]",
-                              tone.pill
-                            )}
-                          >
-                            Next Step
-                          </span>
-                          <h3 className="mt-6 text-2xl font-semibold">{action.title}</h3>
+                          
+                          <h3 className="mt-3 text-xl font-semibold">{action.title}</h3>
                           <p className="mt-3 flex-1 text-base">{action.description}</p>
                           <p className={cx("mt-4 text-sm font-semibold", tone.detail)}>{action.details}</p>
-                          <Button variant="outline" className={cx("mt-8 w-full justify-between", tone.button)}>
+                          <Button variant="outline" className={cx("mt-8 w-full justify-between mb-4", tone.button)}>
                             {action.button} <span>→</span>
                           </Button>
                         </div>
@@ -564,7 +558,7 @@ function MissionVisionBlock({
       <div className="mt-6 space-y-4">
         {points.map((point) => (
           <div key={point.title} className="flex gap-4">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 font-semibold text-brand">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 font-semibold text-brand">
               {point.letter}
             </div>
             <div>

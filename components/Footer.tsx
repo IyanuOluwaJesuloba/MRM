@@ -11,7 +11,7 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-[#001b27] text-white">
+    <footer className="bg-[#001b27] text-white pl-30">
       <motion.div
         className="mx-auto max-w-[1280px] px-6 py-12 md:px-12 lg:px-16 grid gap-8 md:grid-cols-4 "
         initial="hidden"

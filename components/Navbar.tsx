@@ -67,7 +67,7 @@ export function Navbar({ className }: { className?: string }) {
         </ButtonLink>
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-[12px] border border-white/20 p-2 text-white lg:hidden"
+          className="inline-flex items-center justify-center p-2 text-white lg:hidden"
           aria-label="Toggle menu"
           onClick={toggle}
         >
