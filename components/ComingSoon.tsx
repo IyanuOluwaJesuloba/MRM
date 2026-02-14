@@ -19,7 +19,7 @@ export function ComingSoon({
       <main className="bg-navy text-(--color-soft)">
         <Section className="pt-32 pb-20">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl shadow-[0_25px_60px_rgba(0,27,39,0.08)]">
+            <div className="mx-auto hidden md:flex h-16 w-16 items-center justify-center rounded-2xl shadow-[0_25px_60px_rgba(0,27,39,0.08)]">
               <Image
                 src="/assests/svg/Icon Colored.png"
                 alt="Mighty Refuge logo"
