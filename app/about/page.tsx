@@ -254,24 +254,23 @@ export default function AboutPage() {
                     <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
                       <Reveal>
                         <div>
-                          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand text-end">Mission Statement (TEEM)</p>
-                          <h2 className="mt-4 text-3xl font-semibold text-end">Our Mission</h2>
-                          <p className="mt-4 text-base text-white/75 text-end">
+                          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand text-left lg:text-end">Mission Statement (TEEM)</p>
+                          <h2 className="mt-4 text-3xl font-semibold text-left lg:text-end">Our Mission</h2>
+                          <p className="mt-4 text-base text-white/75 text-left lg:text-end">
                             At Mighty Refuge Mission, our mission is to fulfill the Great Commission (Matthew 28:18–20) by proclaiming the
                             Gospel to villages, rural communities, and cities, winning souls for Christ, and discipling believers to become
                             mature followers of Jesus (Ephesians 4:13). We provide a refuge of spiritual solace, hope, and transformation
                             through the Holy Spirit&apos;s power (Acts 1:8), empowering men and women to live victorious lives and impact their
                             communities for God&apos;s glory.
                           </p>
-                          <div className="mt-8 space-y-4 text-end ">
+                          <div className="mt-8 space-y-4 text-left lg:text-end">
                             {missionPoints.map((point) => (
-                              <div key={point.title} className="flex gap-4 text-end justify-end">
-                                
-                                <div className="text-end">
+                              <div key={point.title} className="flex gap-4 lg:justify-end">
+                                <div className="order-2 text-left lg:order-1 lg:text-end">
                                   <p className="text-lg font-semibold">{point.title}</p>
                                   <p className="text-sm text-white/75">{point.detail}</p>
                                 </div>
-                                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 font-semibold text-brand">
+                                <div className="order-1 flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 font-semibold text-brand lg:order-2">
                                   {point.letter}
                                 </div>
                               </div>
