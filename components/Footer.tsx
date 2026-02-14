@@ -8,9 +8,9 @@ const footerLinks = {
   quick: [
     { label: "Home", href: "/home" },
     { label: "About Us", href: "/about" },
-    { label: "Events", href: "/home#updates" },
-    { label: "Get Involved", href: "/home#connect" },
-    { label: "Give", href: "/home#connect" },
+    { label: "Events", href: "/events" },
+    { label: "Get Involved", href: "/getInvolved" },
+    { label: "Give", href: "/give" },
   ],
   serviceTimes: ["Sunday: 9:00 AM", "Tuesday: 6:00 PM", "Thursday: 6:00 PM"],
   socials: ["Facebook", "Instagram", "YouTube"],
