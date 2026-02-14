@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@source "./**/*.{js,ts,jsx,tsx,mdx}";
+@source "../components/**/*.{js,ts,jsx,tsx,mdx}";
+@source "../lib/**/*.{js,ts,jsx,tsx,mdx}";
+
 :root {
   --color-brand: #ff8c21;
   --color-navy: #001b27;
@@ -89,6 +93,10 @@ h6 {
 
 .text-muted {
   color: var(--color-muted);
+}
+
+.text-soft {
+  color: var(--color-soft);
 }
 
 .section-shell {
