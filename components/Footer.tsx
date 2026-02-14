@@ -2,9 +2,16 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const footerLinks = {
-  quick: ["Home","About Us", "Events","Get Involved", "Give"],
+  quick: [
+    { label: "Home", href: "/home" },
+    { label: "About Us", href: "/about" },
+    { label: "Events", href: "/home#updates" },
+    { label: "Get Involved", href: "/home#connect" },
+    { label: "Give", href: "/home#connect" },
+  ],
   serviceTimes: ["Sunday: 9:00 AM", "Tuesday: 6:00 PM", "Thursday: 6:00 PM"],
   socials: ["Facebook", "Instagram", "YouTube"],
 };
@@ -40,7 +47,11 @@ export function Footer() {
           <h4 className="text-lg font-semibold">Quick Links</h4>
           <ul className="mt-4 space-y-2 text-sm text-white/70">
             {footerLinks.quick.map((item) => (
-              <li key={item}>{item}</li>
+              <li key={item.label}>
+                <Link href={item.href} className="hover:text-white hover:underline underline-offset-4">
+                  {item.label}
+                </Link>
+              </li>
             ))}
           </ul>
         </motion.div>

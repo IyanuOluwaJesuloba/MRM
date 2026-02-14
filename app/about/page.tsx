@@ -383,7 +383,7 @@ export default function AboutPage() {
                       </div>
 
                       <div className="mt-8 flex justify-start sm:justify-end">
-                        <ButtonLink href="#contact" className="button-ripple w-fit">
+                        <ButtonLink href="#contact" variant="navy" className="button-ripple w-fit">
                           Meet our pastors →
                         </ButtonLink>
                       </div>
