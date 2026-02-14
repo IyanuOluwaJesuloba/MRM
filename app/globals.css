@@ -107,7 +107,7 @@ h6 {
 
 .card-surface {
   border-radius: 16px;
-  border: 1px solid color-mix(in srgb, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-navy) 15%, transparent);
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(26px);
   box-shadow: 0 35px 80px rgba(0, 27, 39, 0.15);

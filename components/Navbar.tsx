@@ -3,21 +3,29 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ButtonLink } from "@/components/Button";
 import { cx } from "@/lib/cx";
 import Logo from "@/public/assests/svg/Logo1.png"
 
 const links = [
-  { label: "Services", href: "/#services" },
+  { label: "Home", href: "/home" },
   { label: "About", href: "/about" },
+  { label: "Events", href: "/events" },
   { label: "Get Involved", href: "/get-involved" },
-  { label: "Contact", href: "/contact" },
+  { label: "Give", href: "/give" },
 ];
 
 export function Navbar({ className }: { className?: string }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,8 +64,21 @@ export function Navbar({ className }: { className?: string }) {
               whileHover={{ y: -1 }}
               transition={{ type: "spring", stiffness: 500, damping: 30 }}
             >
-              <Link href={link.href} className="transition hover:text-white">
+              <Link
+                href={link.href}
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={cx(
+                  "relative transition hover:text-white",
+                  isActive(link.href) && "text-brand"
+                )}
+              >
                 {link.label}
+                {isActive(link.href) && (
+                  <span
+                    className="pointer-events-none absolute -bottom-2 left-0 h-px w-full bg-brand"
+                    aria-hidden="true"
+                  />
+                )}
               </Link>
             </motion.span>
           ))}
@@ -119,7 +140,17 @@ export function Navbar({ className }: { className?: string }) {
                     transition={{ delay: idx * 0.04, duration: 0.2, ease: "easeOut" }}
                     className="block"
                   >
-                    <Link href={link.href} onClick={close} className="block">
+                    <Link
+                      href={link.href}
+                      onClick={close}
+                      aria-current={isActive(link.href) ? "page" : undefined}
+                      className={cx(
+                        "block rounded-xl px-3 py-2 transition",
+                        isActive(link.href)
+                          ? "bg-white/10 text-brand"
+                          : "text-white hover:bg-white/5"
+                      )}
+                    >
                       {link.label}
                     </Link>
                   </motion.span>
