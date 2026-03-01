@@ -122,13 +122,18 @@ export function JoinMinistryForm() {
         </div>
 
         <Field label="How would you like to serve?">
-          <div className="relative">
+          <div className="group relative">
             <select
               value={form.interest}
               onChange={update("interest")}
               className={cx(
                 inputClass,
-                "navy-select appearance-none pr-12 cursor-pointer bg-[#001b27] text-white border-white/20 focus:border-brand hover:border-brand/60",
+                "navy-select appearance-none cursor-pointer pr-12",
+                "rounded-xl border border-white/15 bg-gradient-to-br from-white/12 via-white/6 to-transparent",
+                "bg-[#001b27]/60 text-white shadow-[0_18px_55px_rgba(0,0,0,0.35)] backdrop-blur-xl",
+                "transition duration-200",
+                "hover:border-white/28 hover:bg-[#001b27]/72",
+                "focus:border-brand/70 focus:ring-2 focus:ring-brand/30",
               )}
               name="interest"
             >
@@ -144,7 +149,7 @@ export function JoinMinistryForm() {
                 viewBox="0 0 20 20"
                 fill="currentColor"
                 aria-hidden="true"
-                className="h-5 w-5 text-white/70"
+                className="h-5 w-5 text-white/70 transition-colors duration-200 group-hover:text-white/90 group-focus-within:text-brand"
               >
                 <path
                   fillRule="evenodd"
