@@ -249,7 +249,7 @@ export default function LandingPage() {
                           <ButtonLink href="/about" className="w-fit">
                             Learn Our Full Story →
                           </ButtonLink>
-                          <ButtonLink href="#services" variant="navy" className="w-fit">
+                          <ButtonLink href="/getInvolved" variant="navy" className="w-fit">
                             Join Us →
                           </ButtonLink>
                         </div>
