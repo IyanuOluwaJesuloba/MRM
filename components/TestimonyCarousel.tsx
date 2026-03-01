@@ -17,16 +17,20 @@ interface TestimonyCarouselProps {
 
 export function TestimonyCarousel({ items }: TestimonyCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [visibleSlides, setVisibleSlides] = useState(() => determineSlides(items.length));
+  const [windowWidth, setWindowWidth] = useState(() =>
+    typeof window === "undefined" ? Number.POSITIVE_INFINITY : window.innerWidth
+  );
 
   useEffect(() => {
     const handleResize = () => {
-      setVisibleSlides(determineSlides(items.length));
+      setWindowWidth(window.innerWidth);
     };
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [items.length]);
+  }, []);
+
+  const visibleSlides = useMemo(() => determineSlides(windowWidth, items.length), [items.length, windowWidth]);
 
   useEffect(() => {
     if (items.length <= 1) return;
@@ -187,13 +191,12 @@ export function TestimonyCarousel({ items }: TestimonyCarouselProps) {
   );
 }
 
-function determineSlides(totalItems: number) {
-  if (typeof window === "undefined") {
-    return Math.min(3, totalItems || 1);
-  }
+function determineSlidesMax(totalItems: number) {
+  return Math.min(3, totalItems || 1);
+}
 
-  const width = window.innerWidth;
-  if (width >= 1280) return Math.min(3, totalItems || 1);
+function determineSlides(width: number, totalItems: number) {
+  if (width >= 1280) return determineSlidesMax(totalItems);
   if (width >= 768) return Math.min(2, totalItems || 1);
   return 1;
 }

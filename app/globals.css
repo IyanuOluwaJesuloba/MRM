@@ -95,6 +95,20 @@ h6 {
   color: var(--color-muted);
 }
 
+.navy-select {
+  color-scheme: dark;
+}
+
+.navy-select option {
+  background: var(--color-navy);
+  color: #ffffff;
+}
+
+.navy-select option:checked {
+  background: var(--color-soft);
+  color: var(--color-navy);
+}
+
 .text-soft {
   color: var(--color-soft);
 }

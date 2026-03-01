@@ -20,9 +20,16 @@ export function SectionHeading({
       className={cx("flex flex-col gap-4", align === "center" ? "text-center" : "text-left")}
     >
       <p className="text-sm uppercase tracking-[0.3em] text-brand">{eyebrow}</p>
-      <h2 className={cx("text-4xl font-semibold leading-tight", tone === "light" && "text-white")}>{title}</h2>
+      <h2
+        className={cx(
+          "text-3xl font-semibold leading-tight sm:text-4xl",
+          tone === "light" && "text-white",
+        )}
+      >
+        {title}
+      </h2>
       {description && (
-        <p className={cx("text-lg", tone === "light" ? "text-white/70" : "text-muted")}>{description}</p>
+        <p className={cx("text-base sm:text-lg", tone === "light" ? "text-white/70" : "text-muted")}>{description}</p>
       )}
     </div>
   );

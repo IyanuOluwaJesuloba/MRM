@@ -55,7 +55,15 @@ export function Navbar({ className }: { className?: string }) {
     >
       <div className="section- flex items-center justify-between gap-4 py-4 px-4 text-white">
         <Link href="/" className="flex items-center gap-3">
-          <Image src={Logo} alt="Mighty Refuge" width={100} height={100} />
+          <motion.div
+            style={{ perspective: 800 }}
+            whileHover={{ rotateY: 180 }}
+            transition={{ type: "spring", stiffness: 260, damping: 18 }}
+          >
+            <motion.div style={{ transformStyle: "preserve-3d" }}>
+              <Image src={Logo} alt="Mighty Refuge" width={100} height={100} />
+            </motion.div>
+          </motion.div>
         </Link>
         <nav className="hidden items-center gap-8 text-sm font-semibold text-white/80 lg:flex">
           {links.map((link) => (
