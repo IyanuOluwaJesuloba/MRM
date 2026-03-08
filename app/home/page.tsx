@@ -260,7 +260,7 @@ export default function LandingPage() {
                       </div>
                     </Reveal>
                   </div>
-                  <Reveal delay={120} className="md:block hidden ">
+                  <Reveal delay={120} className="lg:block hidden ">
                     <div className="relative flex h-[460px] w-full items-end justify-end lg:h-auto lg:min-h-[700px]">
                       <Image
                         src={Congregation}
@@ -275,7 +275,7 @@ export default function LandingPage() {
                 </div>
               </Section>
 
-              <Section fullBleed className="pt-20 sm:pt-28 lg:pt-40">
+              <Section fullBleed className="pt-20 sm:pt-28 lg:pt-40 sm:py-0 py-10">
                 <div className="relative isolate overflow-hidden min-h-[520px] sm:min-h-[580px] lg:min-h-[860px]">
                   <Image
                     src="/Pastor.png"
@@ -315,7 +315,7 @@ export default function LandingPage() {
                 </div>
               </Section>
 
-              <Section id="services" className="relative overflow-hidden sm:-mt-10">
+              <Section id="services" className="relative overflow-hidden-mt-10">
                 <div
                   className="pointer-events-none absolute inset-x-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,_rgba(255,140,33,0.15),_transparent_65%)] blur-3xl"
                   aria-hidden="true"
@@ -461,7 +461,7 @@ export default function LandingPage() {
                 </Section>
               </div>
 
-              <Section id="connect" className="relative my-16 overflow-hidden">
+              <Section id="connect" className="relative my-8 overflow-hidden">
                 <div
                   className="pointer-events-none absolute inset-y-0 left-1/2 h-full w-[480px] -translate-x-1/2 rotate-6 bg-[radial-gradient(circle,_rgba(255,140,33,0.2),_transparent_70%)] blur-3xl"
                   aria-hidden="true"

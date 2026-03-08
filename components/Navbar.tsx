@@ -169,7 +169,7 @@ export function Navbar({ className }: { className?: string }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: links.length * 0.04 + 0.05, duration: 0.2, ease: "easeOut" }}
               >
-                <ButtonLink href="/services" variant="ghost" className="mt-6 w-full justify-center">
+                <ButtonLink href="/getInvolved" variant="ghost" className="mt-6 w-full justify-center">
                   Plan a Visit
                 </ButtonLink>
               </motion.div>
