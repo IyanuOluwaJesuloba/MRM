@@ -10,6 +10,7 @@ import { TestimonyCarousel } from "@/components/TestimonyCarousel";
 import { Footer } from "@/components/Footer";
 import { cx } from "@/lib/cx";
 import { Reveal } from "@/components/Reveal";
+import Congregation from "@/public/assests/svg/ChristianGathering.png"
 
 const values = [
   {
@@ -95,9 +96,9 @@ const serviceCards = [
     tone: "brand",
   },
   {
-    title: "Thursday Prayer Watches",
+    title: "Friday Prayer Watches",
     tag: "Intercession",
-    time: "Thursdays · 6:00 PM – 7:30 PM",
+    time: "Fridays · 6:00 PM – 7:30 PM",
     location: "Prayer Furnace · Online & On-site",
     description: "Targeted prophetic intercession for our city, nation, and specific needs from our community.",
     highlights: ["Spirit-led worship flow", "Prayer fire teams", "Testimonies + follow-up"],
@@ -164,6 +165,7 @@ const quickActions = [
       "We believe in the power of prayer. Submit your request and our community will intercede with you.",
     details: "Average response is less than 24 hours",
     button: "Submit Prayer Request",
+    href: "/about/#contact",
     tone: "brand",
   },
   {
@@ -172,6 +174,7 @@ const quickActions = [
       "Ready to take the next step? Discover membership pathways and get connected to our ministry family.",
     details: "Monthly Foundations Track",
     button: "Start Membership",
+    href: "/getInvolved",
     tone: "navy",
   },
   {
@@ -180,6 +183,7 @@ const quickActions = [
       "Your generosity helps us reach more communities with the Gospel. Give securely to support our work.",
     details: "Tax-deductible giving",
     button: "Make a Donation",
+    href: "/give",
     tone: "neutral",
   },
 ] as const;
@@ -226,14 +230,14 @@ export default function LandingPage() {
 
           <div className="page-glass-content">
             <div className="page-glass-content-wrapper">
-              <Section fullBleed className="pt-0" style={{ paddingBlock: 0 }}>
+              <Section fullBleed className="pt-0 min-h-[560px] lg:min-h-[700px]" style={{ paddingBlock: 0 }}>
                 <div className="grid w-full items-stretch gap-10 lg:grid-cols-2 lg:gap-0">
                   <div className="w-full px-6">
                     <Reveal>
-                      <div className="w-full space-y-6 pt-10 md:pt-25 lg:pr-10 lg:pl-40">
+                      <div className="w-full space-y-6 pt-10 md:pt-16 lg:pr-10 lg:pl-24">
                         <SectionHeading
                           eyebrow="Welcome to Mighty Refuge Ministries"
-                          title="A growing faith community in Ibadan, Nigeria dedicated to the Great Commission."
+                          title="A growing faith community in Nigeria dedicated to the Great Commission."
                           align="left"
                         />
                         <p className="text-lg text-muted">
@@ -245,7 +249,7 @@ export default function LandingPage() {
                           Whether you’re seeking spiritual growth, a place to belong, or a call to action, you’ll find a warm welcome
                           and a community committed to seeing God’s kingdom advance in our generation.
                         </p>
-                        <div className="flex lg:flex-wrap flex-row gap-4">
+                        <div className="flex flex-wrap gap-4">
                           <ButtonLink href="/about" className="w-fit">
                             Learn Our Full Story →
                           </ButtonLink>
@@ -257,107 +261,68 @@ export default function LandingPage() {
                     </Reveal>
                   </div>
                   <Reveal delay={120} className="md:block hidden ">
-                    <div className="relative flex h-[360px] w-full items-end justify-end lg:h-auto lg:min-h-[600px]">
+                    <div className="relative flex h-[460px] w-full items-end justify-end lg:h-auto lg:min-h-[700px]">
                       <Image
-                        src="/assests/svg/christian%20gathering.jpg"
+                        src={Congregation}
                         alt="Mighty Refuge congregation gathered in worship"
                         fill
                         priority
                         sizes="(min-width: 1024px) 100vw, 100vw"
-                        className="object-cover"
+                        className="object-contain"
                       />
                     </div>
                   </Reveal>
                 </div>
               </Section>
 
-              {/* <Section>
-                <SectionHeading
-                  eyebrow="What Makes Us Different"
-                  title="Core values that shape our culture"
-                />
-                <div className="mt-10 grid-responsive">
-                  {values.map((value) => (
-                    <Card key={value.title} className="p-6 text-left">
-                      <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand/10">
-                        <Image
-                          src={value.iconSrc}
-                          alt={`${value.title} emblem`}
-                          width={48}
-                          height={48}
-                          className="object-contain"
-                        />
-                      </div>
-                      <h3 className="text-2xl font-semibold">{value.title}</h3>
-                      <p className="mt-3 text-muted">{value.body}</p>
-                    </Card>
-                  ))}
-                </div>
-              </Section> */}
-
-              <Section fullBleed className="pt-0">
-                <div className="relative isolate overflow-hidden">
+              <Section fullBleed className="pt-20 sm:pt-28 lg:pt-40">
+                <div className="relative isolate overflow-hidden min-h-[520px] sm:min-h-[580px] lg:min-h-[860px]">
                   <Image
-                    src="/Pastor.webp"
+                    src="/Pastor.png"
                     alt="Lead Pastor of Mighty Refuge Ministries"
                     fill
                     priority
                     sizes="200vw"
-                    className="object-cover md:block hidden"
+                    className="object-contain md:block hidden h-full w-full"
                   />
                   <div className="absolute inset-0 bg-linear-to-r from-[#00131c]/95 via-[#001b27]/80 to-transparent" />
 
-                  <div className="relative z-10 w-full px-6 py-16 sm:px-10 lg:px-16">
-                    <Reveal>
-                      <div className="max-w-xl space-y-6 text-white lg:pl-30 lg:py-20">
-                        <h2 className="text-4xl font-semibold leading-tight">Our Lead Pastor</h2>
-                        <p className="text-lg text-white/80">
-                          Pastor Benjamin Abiodun has spent two decades raising intercessors, discipling pioneers, and launching Spirit-led
-                          expressions of church. His heart beats for authentic revival—where Scripture, prayer, and the Holy
-                          Spirit&apos; power transform cities.
-                        </p>
-                        <p className="text-base text-white/70">
-                          From humble beginnings with School of the Spirit to today&apos;s Mighty Refuge movement, he continues to call
-                          believers into deeper intimacy with Jesus and courageous obedience to the Great Commission.
-                        </p>
-                        <div className="flex flex-wrap gap-3 text-sm font-semibold text-white/80">
-                         
-                          <div className="">
-                          <ButtonLink href="/about" className="w-fit">
-                            Learn more about him →
-                          </ButtonLink>
+                  <div className="absolute inset-0 z-10 flex items-center">
+                    <div className="w-full px-6 sm:px-10 lg:px-16">
+                      <Reveal>
+                        <div className="max-w-xl space-y-6 text-white lg:pl-24">
+                          <h2 className="text-4xl font-semibold leading-tight">Our Lead Pastor</h2>
+                          <p className="text-lg text-white/80">
+                            Pastor Benjamin Abiodun has spent two decades raising intercessors, discipling pioneers, and launching Spirit-led
+                            expressions of church. His heart beats for authentic revival where Scripture, prayer, and the Holy
+                            Spirit&apos; power transform cities.
+                          </p>
+                          <p className="text-base text-white/70">
+                            From humble beginnings with School of the Spirit to today&apos;s Mighty Refuge movement, he continues to call
+                            believers into deeper intimacy with Jesus and courageous obedience to the Great Commission.
+                          </p>
+                          <div className="flex flex-wrap gap-3 text-sm font-semibold text-white/80">
+                            <div className="">
+                              <ButtonLink href="/about" className="w-fit">
+                                Learn more about him →
+                              </ButtonLink>
+                            </div>
+                          </div>
                         </div>
-                        </div>
-                        
-                      </div>
-                    </Reveal>
+                      </Reveal>
+                    </div>
                   </div>
                 </div>
               </Section>
 
-              {/* <Section >
-                <div className="grid gap-8 lg:grid-cols-2">
-                  <MissionVisionBlock
-                    title="Our Mission: TEEM"
-                    summary="We fulfill the Great Commission by proclaiming the Gospel, discipling believers, and providing a refuge of hope and transformation."
-                    points={missionPoints}
-                  />
-                  <MissionVisionBlock
-                    title="Our Vision: PRE"
-                    summary="We see a movement where the Gospel transforms communities, creating spaces of refuge and empowerment for God's people."
-                    points={visionPoints}
-                  />
-                </div>
-              </Section> */}
-
-              <Section id="services" className="relative overflow-hidden">
+              <Section id="services" className="relative overflow-hidden sm:-mt-10">
                 <div
                   className="pointer-events-none absolute inset-x-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,_rgba(255,140,33,0.15),_transparent_65%)] blur-3xl"
                   aria-hidden="true"
                 />
                 <Reveal>
                   <SectionHeading
-                    eyebrow="Our lifestyle is consistent with the doctrine of scripture"
+                    eyebrow=""
                     title="WORSHIP WITH US"
                   />
                   <p className="mx-auto mt-4 max-w-3xl text-center text-base text-muted">
@@ -393,9 +358,9 @@ export default function LandingPage() {
                           </ul>
                         </div>
 
-                        <Button variant="navy" className="mt-4 w-full justify-between ">
+                        <ButtonLink href="/getInvolved"  variant="navy" className="mt-4 w-full justify-between ">
                           {card.button} <span>→</span>
-                        </Button>
+                        </ButtonLink>
                       </div>
                     </Reveal>
                   ))}
@@ -523,9 +488,9 @@ export default function LandingPage() {
                           <h3 className="mt-3 text-xl font-semibold">{action.title}</h3>
                           <p className="mt-3 flex-1 text-base">{action.description}</p>
                           <p className={cx("mt-4 text-sm font-semibold", tone.detail)}>{action.details}</p>
-                          <Button variant="outline" className={cx("mt-8 w-full justify-between mb-4", tone.button)}>
+                          <ButtonLink href={action.href} variant="outline" className={cx("mt-8 w-full justify-between mb-4", tone.button)}>
                             {action.button} <span>→</span>
-                          </Button>
+                          </ButtonLink>
                         </div>
                       </Reveal>
                     );

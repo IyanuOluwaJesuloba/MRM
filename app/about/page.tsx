@@ -8,6 +8,7 @@ import { Reveal } from "@/components/Reveal";
 import { ButtonLink } from "@/components/Button";
 import Logo from "@/public/assests/svg/Icon Colored.png";
 import Logo1 from "@/public/assests/svg/Logo1.png";
+import Pastor from "@/public/assests/svg/Pastor.jpeg";
 
 const missionPoints = [
   {
@@ -98,8 +99,8 @@ export default function AboutPage() {
           <div className="section-shell pb-20 pt-28 sm:pt-32">
             <Reveal>
               <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-12">
-                <div className="text-center lg:col-span-7 lg:text-left py-18">
-                  <div className="mx-auto flex w-fit items-center gap-3 px- py-2 text-[#ffd1a4] shadow-[0_25px_80px_rgba(0,0,0,0.35)] backdrop-blur lg:mx-0">
+                <div className="text-center lg:col-span-7 lg:text-left py-16 lg:py-0">
+                  <div className="mx-auto flex w-fit items-center gap-3 py-2 text-[#ffd1a4] shadow-[0_25px_80px_rgba(0,0,0,0.35)] backdrop-blur lg:mx-0">
                     <Image src={Logo} alt="Mighty Refuge Ministries" width={26} height={26} className="object-contain" />
                     <p className="text-xs font-semibold uppercase tracking-[0.4em]">Mighty Refuge Ministries</p>
                   </div>
@@ -110,8 +111,8 @@ export default function AboutPage() {
                     hope, and transformation
                   </h1>
                   <p className="mx-auto mt-6 max-w-3xl text-base text-white/75 sm:text-lg lg:mx-0">
-                    Officially founded on March 18th, 2024, we exist to fulfill the Great Commission (Matthew 28:18–20) by proclaiming the
-                    Gospel, winning souls, and discipling believers to maturity (Ephesians 4:13)—through the power of the Holy Spirit (Acts
+                   We exist to fulfill the Great Commission (Matthew 28:18–20) by proclaiming the
+                    Gospel, winning souls, and discipling believers to maturity (Ephesians 4:13) through the power of the Holy Spirit (Acts
                     1:8).
                   </p>
 
@@ -213,7 +214,7 @@ export default function AboutPage() {
                   </Reveal>
 
                   <Reveal delay={120} className="lg:col-span-5">
-                    <div className=" p-8 border-r border-r-[#001b27]/50 text-end">
+                    <div className="p-8 text-left sm:text-end lg:border-r lg:border-r-[#001b27]/50">
                       <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand">Quick Profile</p>
                       <div className="mt-6 space-y-5">
                         <div>
@@ -308,6 +309,75 @@ export default function AboutPage() {
                   </div>
                 </div>
               </Section>
+                
+                   <Section>
+                <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+                  <Reveal className="lg:col-span-5">
+                    <div className="relative overflow-hidden rounded-2xl bg-[#001b27] shadow-[0_35px_90px_rgba(0,27,39,0.18)]">
+                      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-[#001b27] via-[#001b27]/55 to-transparent" />
+                      <div className="relative aspect-[4/5] w-full">
+                        <Image
+                          src={Pastor}
+                          alt="Lead Pastor of Mighty Refuge Ministries"
+                          fill
+                          sizes="(min-width: 1024px) 40vw, 100vw"
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="relative border-t border-white/10 p-6 text-white">
+                        <p className="text-xs font-semibold uppercase tracking-[0.34em] text-white/70">Senior Pastor</p>
+                        <p className="mt-2 text-lg font-semibold">Pst. Abiodun Benjamin Richard</p>
+                      </div>
+                    </div>
+                  </Reveal>
+
+                  <Reveal delay={120} className="lg:col-span-7">
+                    <SectionHeading
+                      eyebrow="Our Lead Pastor"
+                      title="A voice for prayer, discipleship, and Spirit-led revival"
+                      description="Pastor Benjamin Abiodun serves as Senior Pastor and President of Mighty Refuge Ministries, committed to raising intercessors and equipping believers to live with courage and conviction."
+                      align="left"
+                    />
+                    <div className="mt-6 space-y-5 text-base text-muted">
+                      <p>
+                        For over two decades, his ministry has been marked by a passion for Scripture, a deep love for prayer, and a
+                        relentless commitment to the Great Commission.
+                      </p>
+                      <p>
+                        From early gatherings during his undergraduate days to the emergence of Mighty Refuge Ministries today, his
+                        heartbeat remains the same: Jesus exalted, the Holy Spirit welcomed, and lives transformed.
+                      </p>
+                      <p>
+                        Through teaching, mentorship, and pastoral care, he helps believers grow in intimacy with Jesus and step boldly
+                        into their callings—at home, in the marketplace, and in ministry.
+                      </p>
+                    </div>
+
+                    <div className="mt-10 grid gap-4 sm:grid-cols-2">
+                      <Card className="p-6">
+                        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand">Focus</p>
+                        <p className="mt-3 text-lg font-semibold text-[#001b27]">Intercession & Discipleship</p>
+                        <p className="mt-2 text-base text-muted">
+                          Building believers who pray with faith, live with integrity, and grow into maturity.
+                        </p>
+                      </Card>
+                      <Card className="p-6">
+                        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand">Mandate</p>
+                        <p className="mt-3 text-lg font-semibold text-[#001b27]">Spirit-led outreach</p>
+                        <p className="mt-2 text-base text-muted">
+                          Proclaiming Christ with boldness and compassion—bringing hope to cities and communities.
+                        </p>
+                      </Card>
+                    </div>
+
+                    <div className="mt-8 flex flex-wrap gap-3">
+                      <ButtonLink href="#contact" variant="navy" className="button-ripple w-fit">
+                        Connect with the ministry →
+                      </ButtonLink>
+                    </div>
+                  </Reveal>
+                </div>
+              </Section>
 
               <Section>
                 <Reveal>
@@ -333,6 +403,8 @@ export default function AboutPage() {
                   ))}
                 </div>
               </Section>
+
+             
 
               <Section id="leadership">
                 <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
@@ -362,7 +434,7 @@ export default function AboutPage() {
                     </div>
                   </Reveal>
 
-                  <Reveal delay={120} className="lg:col-span-5">
+                  <Reveal delay={120} className="lg:col-span-5 pt-6 lg:pt-0">
                     <div className="p-10 border-b border-l rounded-xl">
                       <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand">The Pastorate</p>
                       <div className="mt-6 space-y-6">
@@ -415,9 +487,9 @@ export default function AboutPage() {
                         <p className="mt-2 text-base text-muted">6:00 PM – 7:00 PM</p>
                       </div>
                       <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand">Thursday</p>
+                        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand">Friday</p>
                         <p className="mt-3 text-2xl font-semibold text-[#001b27]">Prayer Meeting</p>
-                        <p className="mt-2 text-base text-muted">6:00 PM – 7:00 PM</p>
+                        <p className="mt-2 text-base text-muted">6:00 PM – 7:30 PM</p>
                       </div>
                     </div>
                     <div className="separator" />
@@ -473,7 +545,7 @@ export default function AboutPage() {
                         <ButtonLink href="#services" variant="outlineLight" className="button-ripple w-fit">
                           View service times →
                         </ButtonLink>
-                        <ButtonLink href="/landingPage#connect" variant="ghost" className="button-ripple w-fit">
+                        <ButtonLink href="/getInvolved" variant="ghost" className="button-ripple w-fit">
                           Get connected →
                         </ButtonLink>
                       </div>

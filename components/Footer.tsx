@@ -12,15 +12,15 @@ const footerLinks = {
     { label: "Get Involved", href: "/getInvolved" },
     { label: "Give", href: "/give" },
   ],
-  serviceTimes: ["Sunday: 9:00 AM", "Tuesday: 6:00 PM", "Thursday: 6:00 PM"],
+  serviceTimes: ["Sunday: 9:00 AM", "Tuesday: 6:00 PM", "Friday: 6:00 PM"],
   socials: ["Facebook", "Instagram", "YouTube"],
 };
 
 export function Footer() {
   return (
-    <footer className="bg-[#001b27] text-white lg:pl-30">
+    <footer className="bg-[#001b27] text-white">
       <motion.div
-        className="mx-auto max-w-[1280px] px-6 py-12 md:px-12 lg:px-16 grid gap-8 md:grid-cols-4 "
+        className="mx-auto grid max-w-[1280px] gap-8 px-6 py-12 md:grid-cols-2 md:px-12 lg:grid-cols-4 lg:px-16"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}

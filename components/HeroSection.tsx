@@ -32,7 +32,7 @@ export function HeroSection() {
       <div className="relative z-10 flex min-h-screen items-center justify-center">
         <div className="section-shell pb-0">
           <motion.div
-            className="hero-card mx-auto max-w-5xl px-10 py-14 text-center text-white"
+            className="hero-card mx-auto max-w-5xl px-6 py-10 text-center text-white sm:px-10 sm:py-14"
             initial={{ y: 28, opacity: 0, scale: 0.98 }}
             animate={{ y: 0, opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.15, ease: "easeOut" }}

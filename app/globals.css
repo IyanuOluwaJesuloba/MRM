@@ -67,6 +67,7 @@ body {
   background: var(--color-soft);
   color: var(--color-ink);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 h1,

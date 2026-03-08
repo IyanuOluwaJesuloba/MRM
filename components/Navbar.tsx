@@ -61,7 +61,7 @@ export function Navbar({ className }: { className?: string }) {
             transition={{ type: "spring", stiffness: 260, damping: 18 }}
           >
             <motion.div style={{ transformStyle: "preserve-3d" }}>
-              <Image src={Logo} alt="Mighty Refuge" width={100} height={100} />
+              <Image src={Logo} alt="Mighty Refuge" width={100} height={100} className="h-auto w-[84px] sm:w-[100px]" />
             </motion.div>
           </motion.div>
         </Link>

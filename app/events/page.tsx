@@ -37,20 +37,14 @@ export default function EventsPage() {
                 <div className="text-center lg:col-span-7 lg:text-left">
                   <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#ffd1a4]">Events & Calendar</p>
                   <h1 className="mt-6 text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-                    Upcoming gatherings, annual traditions, and special services
+                    Upcoming gatherings,<span className="hero-text"> annual traditions</span>, and special services
                   </h1>
                   <p className="mx-auto mt-6 max-w-3xl text-base text-white/75 sm:text-lg lg:mx-0">
                     Get updates on upcoming events, regular activities, annual traditions, and any registration or RSVP requirements.
                   </p>
 
                   <div className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
-                    <ButtonLink
-                      href="#calendar"
-                      variant="outlineLight"
-                      className="button-ripple w-fit shadow-[0_25px_70px_rgba(0,0,0,0.35)]"
-                    >
-                      View calendar →
-                    </ButtonLink>
+                   
                     <ButtonLink
                       href="/getInvolved"
                       variant="ghost"
@@ -122,7 +116,7 @@ export default function EventsPage() {
                         Every last week of the year, we come together for a prayer retreat where we pray, play, and hear God ahead of the
                         coming year.
                       </p>
-                      <div className="mt-6 rounded-2xl bg-[#001b27]/5 p-5">
+                      <div className="mt-6 rounded-xl bg-[#001b27]/5 p-5">
                         <p className="text-sm font-semibold text-[#001b27]">Registration / RSVP</p>
                         <p className="mt-2 text-sm text-muted">
                           Details, venue, and registration instructions are announced as the retreat approaches.
@@ -139,7 +133,7 @@ export default function EventsPage() {
                         Our Annual Prayer Retreat holds every August (the last week of August). We are trusting God for a venue change this
                         year.
                       </p>
-                      <div className="mt-6 rounded-2xl bg-[#001b27]/5 p-5">
+                      <div className="mt-6 rounded-xl bg-[#001b27]/5 p-5">
                         <p className="text-sm font-semibold text-[#001b27]">Registration / RSVP</p>
                         <p className="mt-2 text-sm text-muted">
                           Watch for announcements about the new venue and any required registration.
